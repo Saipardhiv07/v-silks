@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vsilks - Women's Fashion</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar">
+        <div class="logo">Vsilks</div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search products...">
+            <button>Search</button>
+        </div>
+        <div class="contact">
+            <a href="#">Contact Us</a>
+        </div>
+    </nav>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Fashion is the armor to survive the reality of everyday life.</h1>
+        </div>
+    </section>
+
+    <!-- ===== PRODUCTS GRID ===== -->
+    <section class="products">
+        <div class="product-grid" id="productGrid">
+            <!-- Product cards are inserted here via JS -->
+        </div>
+    </section>
+
+    <!-- ===== MODAL ===== -->
+    <div class="modal" id="productModal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+
+            <img id="modalImg" alt="Product Image">
+            <h3 id="modalTitle"></h3>
+
+            <div class="modal-price">
+                <span class="old" id="modalOld"></span>
+                <span class="new" id="modalNew"></span>
+                <span class="discount" id="modalDiscount"></span>
+            </div>
+
+            <p class="desc" id="modalDesc"></p>
+        </div>
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="footer-contact">
+            <div><span>&#9742;</span> +91 12345 67890</div>
+            <div><span>&#9993;</span> info@vsilks.com</div>
+            <div><span>&#x1F47E;</span> @vsilks</div>
+        </div>
+        <p>&copy; 2025 Vsilks. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
