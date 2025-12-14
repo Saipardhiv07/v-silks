@@ -1,101 +1,121 @@
 const products = [
     {
-        name: "Floral Summer Dress",
-        oldPrice: "₹3999",
-        newPrice: "₹2499",
-        discount: "38% OFF",
-        img: "https://images.unsplash.com/photo-1520975916090-3105956dac38",
-        desc: "A lightweight floral dress designed for summer comfort and elegance."
+        name: "Casual Wear - Blue Top",
+        price: "₹300",
+        color: "Dark-Blue",
+        img: "img/1.jpg",
+        desc: "This elegant navy blue kurti features a subtle white leaf pattern and delicate button detailing down the front. Made for comfort and style, it’s perfect for casual outings or festive occasions."
     },
     {
-        name: "Casual White Top",
-        oldPrice: "₹1999",
-        newPrice: "₹1299",
-        discount: "35% OFF",
-        img: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab",
-        desc: "Minimal and elegant white top suitable for daily casual wear."
+        name: "Casual Wear - Yellow Top",
+        price: "₹300",
+        color: "Yellow",
+        img: "img/2.jpg",
+        desc: "Mustard yellow cotton kurti featuring a subtle white leaf print and a classic round neckline. Designed with a front button placket, offering a comfortable fit perfect for everyday wear."
     },
     {
-        name: "Denim Jacket",
-        oldPrice: "₹4999",
-        newPrice: "₹3499",
-        discount: "30% OFF",
-        img: "https://images.unsplash.com/photo-1539109136881-3be0616acf4b",
-        desc: "Classic denim jacket that complements every modern outfit."
+        name: "Casual Wear - Light Blue Top",
+        price: "₹300",
+        color: "Light-Blue",
+        img: "img/3.jpg",
+        desc: "Teal blue cotton kurti adorned with a delicate white leaf print and a classic round neckline. Features a front button placket and breathable fabric, ideal for comfortable daily wear."
     },
     {
-        name: "Elegant Saree",
-        oldPrice: "₹6999",
-        newPrice: "₹4999",
-        discount: "28% OFF",
-        img: "https://images.unsplash.com/photo-1542060748-10c28b62716b",
-        desc: "Premium saree with refined craftsmanship and luxurious feel."
+        name: "Casual Wear - Black Top",
+        price: "₹350",
+        color: "Black",
+        img: "img/4.jpg",
+        desc: "Charcoal grey kurti featuring an elegant ikat-inspired print in white and mustard tones. Designed with a round neckline and wooden button placket, perfect for stylish everyday wear."
     },
     {
-        name: "Office Blazer",
-        oldPrice: "₹5999",
-        newPrice: "₹4199",
-        discount: "30% OFF",
-        img: "https://images.unsplash.com/photo-1524250502437-3f1f0d8f5f8c",
-        desc: "Tailored blazer perfect for office and formal occasions."
+        name: "3-Pcs Set",
+        price: "₹1600",
+        color: "Pink",
+        img: "img/5.jpg",
+        desc: "Elegant dusty-rose straight kurta set featuring intricate white floral embroidery along the neckline and front panel. Paired with matching pants and a sheer embroidered dupatta, ideal for festive and special occasions."
     },
     {
-        name: "Long Maxi Dress",
-        oldPrice: "₹4599",
-        newPrice: "₹3199",
-        discount: "31% OFF",
-        img: "https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb",
-        desc: "Flowy maxi dress designed for elegance and comfort."
+        name: "3-Pcs Set",
+        price: "₹1800",
+        color: "Multicolor",
+        img: "img/6.jpg",
+        desc: "Royal blue straight kurta adorned with subtle embellishments, paired with matching bottoms for a graceful look. Comes with a contrasting printed dupatta featuring peacock and floral motifs, perfect for festive and ethnic occasions."
     },
     {
-        name: "Stylish Kurti",
-        oldPrice: "₹2999",
-        newPrice: "₹1999",
-        discount: "33% OFF",
-        img: "https://images.unsplash.com/photo-1515372039744-b8f02a3ae446",
-        desc: "Traditional kurti with modern design and premium fabric."
+        name: "3-Pcs Set",
+        price: "₹2000",
+        color: "Multicolor",
+        img: "img/7.jpg",
+        desc: "Off-white flared kurta featuring intricate thread embroidery with elegant peacock motifs and subtle sequin detailing. Designed with a round neckline and elbow-length sleeves, ideal for festive and traditional occasions."
     },
     {
-        name: "Party Wear Gown",
-        oldPrice: "₹8999",
-        newPrice: "₹6499",
-        discount: "28% OFF",
-        img: "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9",
-        desc: "Luxury party gown designed to stand out at every occasion."
-    }
+        name: "Casual Wear",
+        price: "₹300",
+        color: "White",
+        img: "img/8.jpg",
+        desc: "Grey and white printed kurti featuring a modern ikat-inspired pattern with a contrasting embroidered front panel. Designed with a round neckline and soft fabric, perfect for comfortable everyday and office wear."
+    },
+    
 ];
 
+
 const productGrid = document.getElementById("productGrid");
+const searchInput = document.getElementById("searchInput");
 
-// Render products
-products.forEach((product, index) => {
-    const card = document.createElement("div");
-    card.classList.add("product-card");
+/* ===== RENDER PRODUCTS ===== */
+function renderProducts(list) {
+    productGrid.innerHTML = "";
 
-    card.innerHTML = `
-        <img src="${product.img}" alt="${product.name}">
-        <h3>${product.name}</h3>
-        <div class="product-price">
-            <span class="old">${product.oldPrice}</span>
-            <span class="new">${product.newPrice}</span>
-            <span class="discount">${product.discount}</span>
-        </div>
-        <button onclick="openModal(${index})">View Details</button>
-    `;
+    list.forEach(product => {
+        const card = document.createElement("div");
+        card.className = "product-card";
 
-    productGrid.appendChild(card);
+        card.innerHTML = `
+            <img src="${product.img}" alt="${product.name}">
+            <h3>${product.name}</h3><br>
+
+            <div class="product-info">
+                <p class="price">Price: <strong>${product.price}</strong></p><br>
+                <p class="color">Color: ${product.color}</p>
+                <br>
+            </div>
+
+            <button>View Details</button>
+        `;
+
+        card.querySelector("button").addEventListener("click", () => {
+            openModal(product);
+        });
+
+        productGrid.appendChild(card);
+    });
+}
+
+/* ===== INITIAL LOAD ===== */
+renderProducts(products);
+
+/* ===== SEARCH FUNCTIONALITY ===== */
+searchInput.addEventListener("input", function () {
+    const query = this.value.toLowerCase();
+
+    const filtered = products.filter(product =>
+        product.name.toLowerCase().includes(query)
+    );
+
+    renderProducts(filtered);
 });
 
-// Modal functions
-function openModal(index) {
+/* ===== MODAL FUNCTIONS ===== */
+function openModal(product) {
     const modal = document.getElementById("productModal");
 
-    document.getElementById("modalImg").src = products[index].img;
-    document.getElementById("modalTitle").innerText = products[index].name;
-    document.getElementById("modalOld").innerText = products[index].oldPrice;
-    document.getElementById("modalNew").innerText = products[index].newPrice;
-    document.getElementById("modalDiscount").innerText = products[index].discount;
-    document.getElementById("modalDesc").innerText = products[index].desc;
+    document.getElementById("modalImg").src = product.img;
+    document.getElementById("modalTitle").innerText = product.name;
+
+    document.getElementById("modalPrice").innerText = `Price: ${product.price}`;
+    document.getElementById("modalColor").innerText = `Color: ${product.color}`;
+
+    document.getElementById("modalDesc").innerText = product.desc;
 
     modal.style.display = "flex";
 }
@@ -104,10 +124,56 @@ function closeModal() {
     document.getElementById("productModal").style.display = "none";
 }
 
-// Close modal on outside click
-window.onclick = function(event) {
+/* Close modal when clicking outside */
+window.onclick = function (e) {
     const modal = document.getElementById("productModal");
-    if (event.target == modal) {
+    if (e.target === modal) {
         modal.style.display = "none";
     }
+};
+
+
+/* ===== CAROUSEL LOGIC ===== */
+const carouselTrack = document.getElementById("carouselTrack");
+const prevBtn = document.getElementById("prevBtn");
+const nextBtn = document.getElementById("nextBtn");
+
+const carouselProducts = products.slice(0, 5); // first 5 products
+let currentIndex = 0;
+
+/* Render carousel */
+carouselProducts.forEach(product => {
+    const card = document.createElement("div");
+    card.className = "carousel-card";
+
+    card.innerHTML = `
+        <img src="${product.img}" alt="${product.name}">
+        <h4>${product.name}</h4>
+        <p>${product.price}</p>
+    `;
+
+    card.addEventListener("click", () => openModal(product));
+    carouselTrack.appendChild(card);
+});
+
+function updateCarousel() {
+    const width = carouselTrack.children[0].offsetWidth;
+    carouselTrack.style.transform = `translateX(-${currentIndex * width}px)`;
 }
+
+nextBtn.onclick = () => {
+    currentIndex = (currentIndex + 1) % carouselProducts.length;
+    updateCarousel();
+};
+
+prevBtn.onclick = () => {
+    currentIndex =
+        (currentIndex - 1 + carouselProducts.length) % carouselProducts.length;
+    updateCarousel();
+};
+
+/* Auto slide every 5 seconds */
+setInterval(() => {
+    nextBtn.click();
+}, 3000);
+
