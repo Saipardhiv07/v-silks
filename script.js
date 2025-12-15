@@ -55,6 +55,70 @@ const products = [
         img: "img/8.jpg",
         desc: "Grey and white printed kurti featuring a modern ikat-inspired pattern with a contrasting embroidered front panel. Designed with a round neckline and soft fabric, perfect for comfortable everyday and office wear."
     },
+    {
+        name: "2-Pcs Set",
+        price: "₹400",
+        color: "Lavender",
+        img: "img/9.jpg",
+        desc: "Lavender printed kurta featuring a soft floral pattern with an elegant embroidered V-neckline. Paired with a matching striped bottom, offering a comfortable and stylish everyday ethnic look."
+
+    },
+    {
+        name: "2-Pcs Set",
+        price: "₹400",
+        color: "Yellow",
+        img: "img/10.jpg",
+        desc: "Bright yellow kurta set featuring a floral printed top with decorative buttons, paired with striped bottoms. Completed with a contrasting polka-dot dupatta, perfect for a fresh and cheerful ethnic look."
+    },
+    {
+        name: "2-Pcs Set",
+        price: "₹400",
+        color: "Pink",
+        img: "img/11.jpg",
+        desc: "Pink printed kurta featuring delicate floral motifs and a classic round neckline with button detailing. Paired with a coordinated patterned bottom, offering a comfortable and stylish everyday ethnic set."
+    },
+    {
+        name: "2-Pcs Set",
+        price: "₹400",
+        color: "Rose Pink",
+        img: "img/12.jpg",
+        desc: "Rose pink printed kurta featuring a graceful leaf pattern with an embellished V-neckline. Paired with matching printed bottoms, offering a comfortable and elegant everyday ethnic look."
+    },
+    {
+        name: "Casual Wear",
+        price: "₹400",
+        color: "White",
+        img: "img/13.jpg",
+        desc: "Elegant off-white maxi dress featuring a soft beige floral print with a flattering square neckline. Designed with puff sleeves and a flowy tiered silhouette, perfect for casual outings and day wear."
+    },
+    {
+        name: "Casual Wear",
+        price: "₹400",
+        color: "Pink",
+        img: "img/14.jpg",
+        desc: "Soft pink kurta featuring a subtle geometric print with a mandarin collar and front button placket. Designed with a relaxed fit and side tie-up detail, perfect for comfortable everyday and office wear."
+    },
+    {
+        name: "Casual Wear",
+        price: "₹400",
+        color: "Yellow",
+        img: "img/15.jpg",
+        desc: "Mustard yellow tiered dress featuring an all-over leaf motif print and a classic round neckline. Designed with short sleeves and a flowy silhouette, perfect for casual outings and everyday comfort."
+    },
+    {
+        name: "2-Pcs Set",
+        price: "₹400",
+        color: "Deep Pink",
+        img: "img/16.jpg",
+        desc: "Deep pink cotton kurti featuring a delicate white leaf print and a classic round neckline. Accented with a front button placket, offering a comfortable and stylish everyday wear option."
+    },
+    {
+        name: "2-Pcs Set",
+        price: "₹400",
+        color: "Maroon",
+        img: "img/17.jpg",
+        desc: "Elegant maroon kurti with a white floral print, featuring a round neckline and front button placket. Soft, stylish, and perfect for everyday wear or casual outings."
+    },
     
 ];
 
